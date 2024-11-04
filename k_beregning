@@ -1,0 +1,15 @@
+import numpy as np
+
+def beregn_k(T_0, T_omgivelse, T_t, t):
+    return - (1 / t) * np.log((T_t - T_omgivelse) / (T_0 - T_omgivelse))
+
+
+T_0 = 92.1  # Starttemperaturen til HAM-let
+T_omgivelse = 23.3  # Romtemperaturen
+T_t = 29.1  # Temperaturen etter t minutter
+t = 155  # Tid i minutter 
+
+
+k = beregn_k(T_0, T_omgivelse, T_t, t)
+
+print(f"Verdien av k er: {k:.4f}")
